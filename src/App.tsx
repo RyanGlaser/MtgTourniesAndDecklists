@@ -1,19 +1,30 @@
-import { createSignal, type Component } from 'solid-js';
+import { ComponentProps, type Component } from 'solid-js';
+import { render } from "solid-js/web";
+import { Router, Route, A } from "@solidjs/router";
+import './App.scss'
+import HomePage from './pages/HomePage/home-page';
+import UserProfilePage from './pages/UserProfilePage/user-profile-page';
+import CardDatabasePage from './pages/CardDatabasePage/card-database-page';
+import GlobalHeader from './components/GlobalHeader/global-header';
+import AboutPage from './pages/AboutPage/about-page';
 
-import logo from './logo.svg';
-import styles from './App.module.css';
-import CardSearchBar from './components/CardSearchBar/CardSearchBar';
-
-const App: Component = () => {
-  const [count, setCount] = createSignal(0);
-
-  return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <CardSearchBar></CardSearchBar>
-      </header>
-    </div>
+const App: Component<ComponentProps<any>> = (props) => (
+    <>
+    <GlobalHeader />
+    {props.children}
+    </>
   );
-};
+
+render(() => (  
+<Router root={App}>
+<Route path="/" component={HomePage} />
+<Route path="/users" component={UserProfilePage} />
+<Route path="/cards" component={CardDatabasePage} />
+<Route path="/about" component={AboutPage} />
+{/* <Route path="/users" component={Users} /> */}
+{/* <Route path="*paramName" component={NotFound} /> */}
+</Router>
+), 
+document.getElementById('root')!);
 
 export default App;
