@@ -8,10 +8,9 @@ const CardDatabasePage: Component = (props) => {
 
         <div>
             <h2>My name is Ryan Glaser</h2>
-            <span>I am a software engineer that loves playing Magic the Gathering.
-                This is a passion project to build a website allowing users to view tournament results and decklists from Magic the Gathering tournaments, create decklists,andsearch magic cards using scryfall API.
-                Project is built using SolidJS, Sass, Scryfall API.
-            </span>
+            I am a software engineer that loves playing Magic the Gathering.
+            This is a passion project to build a website allowing users to view tournament results and decklists from Magic the Gathering tournaments, create decklists,andsearch magic cards using scryfall API.
+            Project is built using SolidJS, Sass, Scryfall API.
         </div>
         </>
     )
