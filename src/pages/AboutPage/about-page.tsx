@@ -5,7 +5,6 @@ const CardDatabasePage: Component = (props) => {
     return (
         <>
         <h1>About Me</h1>
-
         <div>
             <h2>My name is Ryan Glaser</h2>
             I am a software engineer that loves playing Magic the Gathering.

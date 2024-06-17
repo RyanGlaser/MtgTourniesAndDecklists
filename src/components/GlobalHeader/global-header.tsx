@@ -1,20 +1,20 @@
 import { A } from '@solidjs/router';
 import { Component, createSignal } from 'solid-js';
+import './global-header.scss';
 
-const GlobalHeader: Component = (props) => {
+
+const GlobalHeader: Component = () => {
     return (
-        <nav>
-            <div>
-                <div>
-                    'Hello Now'
+        <nav class="navbar">
+                <div class="icon-container">
+                    Hello Now
                 </div>
-                <div>
+                <div class ="pages-container">
                     <A href="/">Home</A>
                     <A href="/users">Users</A>
                     <A href="/cards">Cards</A>
                     <A href="/about">About</A>
                 </div>
-            </div>
         </nav>
     )
 }
