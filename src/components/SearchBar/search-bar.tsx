@@ -3,7 +3,13 @@ import * as Scry from "scryfall-sdk";
 import './search-bar.scss';
 import { HiSolidMagnifyingGlass } from 'solid-icons/hi'
 
-const CardSearchBar: Component = (props) => {
+/* I want this search bar to be able to search for cards, decks, or tournaments in the DB
+when a user begins to enter a search query, the search bar should display a list of suggestions with a type of 
+card, deck, or tournament. The Search bar will then do an API call to read the data from the DB and display the results
+routing user to correct page based on the type of search result
+*/
+
+const SearchBar: Component = (props) => {
     const [searchQuery, setSearchQuery] = createSignal('');
     // const [card, setCard] = createSignal<Scry.Card>(); // Step 1: Signal to store API response
 
@@ -39,7 +45,7 @@ const CardSearchBar: Component = (props) => {
                     value={searchQuery()}
                     onInput={handleSearch}
                     onKeyDown={handleKeyDown}
-                    placeholder="Search for any magic card"
+                    placeholder="Search for decks, cards, tournaments..."
                     class="search-input"
                 />
             </div>
@@ -50,4 +56,4 @@ const CardSearchBar: Component = (props) => {
     );
 };
 
-export default CardSearchBar;
+export default SearchBar;

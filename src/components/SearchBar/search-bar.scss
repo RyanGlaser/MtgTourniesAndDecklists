@@ -2,6 +2,7 @@ $dark-gray: #5a5a5a;
 $light-gray: #949494;
 $focus-purple: #459fbd;
 $primary-color: #4f5051;
+$mtg-purple: #470464;
 
 .search-container {
     --target-size: 48px;
@@ -15,7 +16,7 @@ $primary-color: #4f5051;
     display: flex;
     position: relative;     
     height: var(--box-height);
-    max-width: 561px;
+    width: 100%;
 
 
 
@@ -46,7 +47,8 @@ $primary-color: #4f5051;
         width: var(--icon-size);
         position: absolute;
         left: var(--side-margin);
-        bottom: var(--icon-vertical-margin)
+        bottom: var(--icon-vertical-margin);
+        color: $light-gray;
 
     }
 }

@@ -18,7 +18,7 @@ const App: Component<ComponentProps<any>> = (props) => (
 render(() => (  
 <Router root={App}>
 <Route path="/" component={HomePage} />
-<Route path="/users" component={UserProfilePage} />
+<Route path="/user-profile" component={UserProfilePage} />
 <Route path="/cards" component={CardDatabasePage} />
 <Route path="/about" component={AboutPage} />
 {/* <Route path="/users" component={Users} /> */}
