@@ -31,7 +31,7 @@ const GlobalHeader: Component = () => {
                     </ul>
                 </div>
                 <div class="navbar__search-container">
-                    <SearchBar placeholder="Search Cards, Decks, Tournaments" />
+                    <SearchBar placeholder="Search Cards, Decks and Tournaments" cards={true} decks={true} tournaments={true} />
                 </div>
                 <div class="navbar__login-container">
                     <A class="navbar__login-container__link" href="/login">Login</A>

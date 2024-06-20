@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 import picture from '../../assets/family.jpg';
 
-const CardDatabasePage: Component = (props) => { 
+const CardDatabasePage: Component = () => { 
     return (
         <>
         <h1>About Me</h1>

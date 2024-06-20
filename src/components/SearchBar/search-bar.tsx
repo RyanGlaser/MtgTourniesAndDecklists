@@ -1,7 +1,6 @@
 import { Component, createSignal } from 'solid-js';
 import * as Scry from "scryfall-sdk";
 import './search-bar.scss';
-import { HiSolidMagnifyingGlass } from 'solid-icons/hi'
 
 /* I want this search bar to be able to search for cards, decks, or tournaments in the DB
 when a user begins to enter a search query, the search bar should display a list of suggestions with a type of 
