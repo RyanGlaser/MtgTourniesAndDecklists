@@ -7,9 +7,22 @@ import { HiSolidMagnifyingGlass } from 'solid-icons/hi'
 when a user begins to enter a search query, the search bar should display a list of suggestions with a type of 
 card, deck, or tournament. The Search bar will then do an API call to read the data from the DB and display the results
 routing user to correct page based on the type of search result
+
+we can pass props down to tell the search bar what kind it is
+{ cards, decks, tournaments }
+cards
+decks
+tournaments
 */
 
-const SearchBar: Component = (props) => {
+type SearchBarProps = {
+  placeholder: string;
+  cards: boolean;
+  decks: boolean;
+  tournaments: boolean;
+};
+
+const SearchBar: Component<SearchBarProps> = (props) => {
     const [searchQuery, setSearchQuery] = createSignal('');
     // const [card, setCard] = createSignal<Scry.Card>(); // Step 1: Signal to store API response
 
@@ -39,14 +52,13 @@ const SearchBar: Component = (props) => {
 
     return (
             <div class="search-container">
-                <HiSolidMagnifyingGlass class="search-magnify-icon"/>
                 <input
                     type="text"
                     value={searchQuery()}
                     onInput={handleSearch}
                     onKeyDown={handleKeyDown}
-                    placeholder="Search for decks, cards, tournaments..."
-                    class="search-input"
+                    placeholder={props.placeholder}
+                    class="search-container__search-input"
                 />
             </div>
             /* <div>

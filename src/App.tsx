@@ -1,6 +1,6 @@
 import { ComponentProps, type Component } from 'solid-js';
 import { render } from "solid-js/web";
-import { Router, Route, A } from "@solidjs/router";
+import { Router, Route } from "@solidjs/router";
 import './App.scss'
 import HomePage from './pages/HomePage/home-page';
 import UserProfilePage from './pages/UserProfilePage/user-profile-page';
@@ -8,6 +8,8 @@ import CardDatabasePage from './pages/CardDatabasePage/card-database-page';
 import GlobalHeader from './components/GlobalHeader/global-header';
 import AboutPage from './pages/AboutPage/about-page';
 
+// TODO: fix the eslint issue not sure why syntax is wrong 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const App: Component<ComponentProps<any>> = (props) => (
     <>
     <GlobalHeader />

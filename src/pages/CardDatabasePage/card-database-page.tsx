@@ -6,7 +6,7 @@ const CardDatabasePage: Component = (props) => {
     return (
         <>
         <h1>Card Database Page</h1>
-        <SearchBar />
+        <SearchBar placeholder='Search Cards'/>
         </>
     )
 }

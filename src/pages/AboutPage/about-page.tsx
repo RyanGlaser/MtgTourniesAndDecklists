@@ -10,7 +10,7 @@ const CardDatabasePage: Component = (props) => {
             <img src={picture}/>
             I am a software engineer that loves playing Magic the Gathering.
             This is a passion project to build a website allowing users to view tournament results and decklists from Magic the Gathering tournaments, create decklists, and search magic cards using scryfall API.
-            Project is built using SolidJS, Sass, Scryfall API.
+            Project is built using SolidJS, Sass, Scryfall API, vite, and probably a million other dependices.
         </div>
         </>
     )

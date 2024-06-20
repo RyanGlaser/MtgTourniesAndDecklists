@@ -6,6 +6,8 @@ $font-text-color: #ffffff;
     color: $font-text-color;
     font-family: 'Noto Sans', Verdana, sans-serif;
     font-size: 1rem;
+    border-color: black;
+    border-width: 2px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -15,17 +17,66 @@ $font-text-color: #ffffff;
     justify-content: space-between;
     padding: 0 16px;
     height: 56px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    //min-width: 1200px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.758);
+
+    @media screen and (min-width: 2160px) {
+        padding: 0 240px;
+    }
 
 
     &__icon-container {
         display: flex;
         align-items: center;
+        background-color: $header-gray;
+
         // height: 100%;
         // width: 48px;
-        cursor: pointer;
+        // cursor: pointer;
+
+        &__link {
+            color: $font-text-color;
+            text-decoration: none;
+            padding: 0 16px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            display: none;
+
+            @media screen and (min-width: 640px) {
+                display: flex;
+            }
+        }
+
+        &__link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &__icon-button {
+            color: $font-text-color;
+            background-color: $header-gray;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            height: 100%;
+
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+
+            &__icon {
+                height: 32px;
+                width: 32px;
+            }
+        }
+
+        &__icon-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
     }
 
     &__pages-container {
@@ -37,8 +88,12 @@ $font-text-color: #ffffff;
 
 
         &__page-list {
-            display: flex;
+            display: none;
             height: 100%;
+
+            @media screen and (min-width: 1024px) {
+                display: flex;
+            }
 
             &__item {
                 list-style: none;
@@ -55,6 +110,11 @@ $font-text-color: #ffffff;
                 cursor: pointer;
             }
 
+            &__icon {
+                margin-right: 8px;
+                color: white;
+            }
+
             &__link:hover {
                 background-color: rgba(255, 255, 255, 0.1);
             }  
@@ -62,14 +122,43 @@ $font-text-color: #ffffff;
     }
 
     &__login-container {
-        display: flex;
+        display: none;
+
+        @media screen and (min-width: 600px) {
+            display: flex;
+        }
+
+        &__link {
+            color: $font-text-color;
+            text-decoration: none;
+            padding: 0 16px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        &__link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        } 
     }
 
     &__search-container {
         display: flex;
-        width: 35%;
-        max-width: 500px;
-        min-width: 200px;
+        width: 100%;
+        // max-width: 500px;
+        //min-width: 200px;
+
+        @media screen and (min-width: 767px) {
+            width: 85%;
+            padding-left: 50px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 35%;
+        }
+        
     }
 }
 
