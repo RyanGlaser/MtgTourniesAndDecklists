@@ -11,7 +11,7 @@ const GlobalHeader: Component = () => {
                 <div class="navbar__icon-container">
                     <A class="navbar__icon-container__link" href="/">MTGFiend</A>
                     <button class="navbar__icon-container__icon-button">
-                    <BsJustify class="navbar__icon-container__icon-button__icon"/>
+                        <BsJustify class="navbar__icon-container__icon-button__icon"/>
                     </button>
                 </div>
                 <div class="navbar__pages-container">
